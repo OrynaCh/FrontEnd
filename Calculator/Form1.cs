@@ -144,15 +144,15 @@ namespace WindowsFormsApp1
                 double right = string.IsNullOrEmpty(operands[1]) ? 0 : double.Parse(operands[1]);
 
                 if (operation.Contains ('+'))
-                    textBoxDisplay.Text = (left + right).ToString();
+                    operation = (left + right).ToString();
                 else if (operation.Contains('-'))
-                    textBoxDisplay.Text = (left - right).ToString();
+                    operation = (left - right).ToString();
                 else if (operation.Contains('*'))
-                    textBoxDisplay.Text = (left * right).ToString();
+                    operation = (left * right).ToString();
                 else if (operation.Contains('/'))
-                    textBoxDisplay.Text = (left / right).ToString();
+                    operation = (left / right).ToString();
             }
-            operation = "";
+            RedrawDisplay();
 
         }
     }
