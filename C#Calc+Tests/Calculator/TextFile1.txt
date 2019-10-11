@@ -1,0 +1,224 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public class CalcLogic
+    {
+        string operation = "";
+        string result = "";
+
+        private string[] getOperands()
+        {
+            return operation.Split(new char[] { '+', '-', '*', '/' }, StringSplitOptions.None);
+        }
+
+        public string ExecuteOperation()
+        {
+            var operands = getOperands();
+
+            if (operands.Length == 2)
+            {
+                double left = string.IsNullOrEmpty(operands[0]) ? 0 : double.Parse(operands[0]);
+                double right = string.IsNullOrEmpty(operands[1]) ? 0 : double.Parse(operands[1]);
+
+                if (operation.Contains('+'))
+                    operation = (left + right).ToString();
+                else if (operation.Contains('-'))
+                    operation = (left - right).ToString();
+                else if (operation.Contains('*'))
+                    operation = (left * right).ToString();
+                else if (operation.Contains('/'))
+                    operation = (left / right).ToString();
+            }
+
+            var last = operands.Last();
+
+            if (string.IsNullOrEmpty(last))
+                result = "0";
+            else
+            {
+                if (last.First() == '.')
+                    result = "0" + last;
+                else
+                    result = last;
+            }
+
+            return result;
+        }
+
+        public void EnterDigit(string digit)
+        {
+            if ((digit == "+" || digit == "-" || digit  == "*" || digit == "/") &&
+                operation.Contains('+') || !operation.Contains('-') || operation.Contains('*') || operation.Contains('/'))
+            {
+                ExecuteOperation();
+                operation += digit;
+                return;
+            }
+
+            var operands = getOperands();
+
+            if (operands.Length > 0 && 
+                !string.IsNullOrWhiteSpace(operands.Last()) && 
+                operands.Last().Length > 9)
+                return;
+
+            operation += digit;
+        }
+    }
+
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+
+            RedrawDisplay();
+        }
+
+        string operation = "";
+
+        void RedrawDisplay()
+        {
+            var operands = operation.Split(new char[] { '+', '-', '*', '/' }, StringSplitOptions.None);
+            var last = operands.Last();
+            if (string.IsNullOrEmpty(last))
+                textBoxDisplay.Text = "0";
+            else
+            {
+                if (last.First() == '.')
+                    textBoxDisplay.Text = "0" + last;
+                else
+                    textBoxDisplay.Text = last;
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            operation += "1";
+            RedrawDisplay();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            operation += "2";
+            RedrawDisplay();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            operation += "3";
+            RedrawDisplay();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            operation += "4";
+            RedrawDisplay();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            operation += "5";
+            RedrawDisplay();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            operation += "6";
+            RedrawDisplay();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            operation += "7";
+            RedrawDisplay();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            operation += "8";
+            RedrawDisplay();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            operation += "9";
+            RedrawDisplay();
+        }
+
+        private void button0_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(operation) && operation.Last() != '+' && operation.Last() != '-' && operation.Last() != '*' && operation.Last() != '/')
+                operation += "0";
+            RedrawDisplay();
+        }
+
+        private void buttonPlus_Click(object sender, EventArgs e)
+        {
+            if (!operation.Contains ('+') && !operation.Contains('-') && !operation.Contains('*') && !operation.Contains('/'))
+                operation += "+";
+        }
+
+        private void buttonMinus_Click(object sender, EventArgs e)
+        {
+            if (!operation.Contains('+') && !operation.Contains('-') && !operation.Contains('*') && !operation.Contains('/'))
+                operation += "-";
+        }
+
+        private void buttonMultiply_Click(object sender, EventArgs e)
+        {
+            if (!operation.Contains('+') && !operation.Contains('-') && !operation.Contains('*') && !operation.Contains('/'))
+                operation += "*";
+        }
+
+        private void buttonDivide_Click(object sender, EventArgs e)
+        {
+            if (!operation.Contains('+') && !operation.Contains('-') && !operation.Contains('*') && !operation.Contains('/'))
+                operation += "/";
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            operation = "";
+            RedrawDisplay();
+        }
+
+        private void buttonDot_Click(object sender, EventArgs e)
+        {
+            var operands = operation.Split(new char[] {'+', '-', '*', '/' }, StringSplitOptions.None);
+            if (!operands.Last().Contains ('.'))
+                operation += ".";
+        }
+
+        private void buttonEqual_Click(object sender, EventArgs e)
+        {
+            var operands = operation.Split(new char[] { '+', '-', '*', '/' }, StringSplitOptions.None);
+            if (operands.Length == 2)
+            {
+                double left = string.IsNullOrEmpty(operands[0]) ? 0 : double.Parse(operands[0]);
+                double right = string.IsNullOrEmpty(operands[1]) ? 0 : double.Parse(operands[1]);
+
+                if (operation.Contains ('+'))
+                    operation = (left + right).ToString();
+                else if (operation.Contains('-'))
+                    operation = (left - right).ToString();
+                else if (operation.Contains('*'))
+                    operation = (left * right).ToString();
+                else if (operation.Contains('/'))
+                    operation = (left / right).ToString();
+            }
+            RedrawDisplay();
+
+        }
+    }
+}
