@@ -1,0 +1,162 @@
+button {
+    background: rgba(44,88,88,1.0);
+    color: white;
+    font-size: 38px;
+}
+
+button:hover {
+    color: color: #A0A0A0;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+}
+
+#tablo {
+
+    background: rgba(192,192,192,1.0);
+    color: black;
+    font-size: 38px;
+    position: absolute;
+    padding-left: 10px;
+    margin-top: 170px;
+    margin-left: 780px;
+    width: 390px;
+    height: 80px;
+}
+
+button#id0 {
+    position: absolute;
+    margin-top: 530px;
+    margin-left: 778px;
+    width: 204px;
+    height: 89px;
+}
+
+button#id1 {
+    position: absolute;
+    margin-top: 265px;
+    margin-left: 778px;
+    width: 102px;
+    height: 89px;
+}
+
+button#id2 {
+    position: absolute;
+    margin-top: 265px;
+    margin-left: 879px;
+    width: 102px;
+    height: 89px;
+}
+
+button#id3 {
+    position: absolute;
+    margin-top: 265px;
+    margin-left: 979px;
+    width: 102px;
+    height: 89px;
+}
+
+button#id4 {
+    position: absolute;
+    margin-top: 351px;
+    margin-left: 778px;
+    width: 102px;
+    height: 89px;
+}
+
+
+button#id5 {
+    position: absolute;
+    margin-top: 351px;
+    margin-left: 879px;
+    width: 102px;
+    height: 89px;
+}
+
+button#id6 {
+    position: absolute;
+    margin-top: 351px;
+    margin-left: 979px;
+    width: 102px;
+    height: 89px;
+}
+
+button#id7 {
+    position: absolute;
+    margin-top: 441px;
+    margin-left: 778px;
+    width: 102px;
+    height: 89px;
+}
+
+
+button#id8 {
+    position: absolute;
+    margin-top: 441px;
+    margin-left: 879px;
+    width: 102px;
+    height: 89px;
+}
+
+button#id9 {
+    position: absolute;
+    margin-top: 441px;
+    margin-left: 979px;
+    width: 102px;
+    height: 89px;
+}
+
+button#multiplyBtn {
+    position: absolute;
+    margin-top: 351px;
+    margin-left: 1080px;
+    width: 102px;
+    height: 89px;
+}
+
+button#divideBtn {
+    position: absolute;
+    margin-top: 265px;
+    margin-left: 1080px;
+    width: 102px;
+    height: 89px;
+}
+
+button#plusBtn {
+    position: absolute;
+    margin-top: 530px;
+    margin-left: 1080px;
+    width: 102px;
+    height: 89px;
+}
+
+button#minusBtn {
+    position: absolute;
+    margin-top: 441px;
+    margin-left: 1080px;
+    width: 102px;
+    height: 89px;
+}
+
+button#del {
+    position: absolute;
+    margin-top: 618px;
+    margin-left: 979px;
+    width: 203px;
+    height: 80px;
+}
+
+button#equally {
+    position: absolute;
+    margin-top: 618px;
+    margin-left: 778px;
+    width: 204px;
+    height: 80px;
+}
+
+button#dot {
+    position: absolute;
+    margin-top: 530px;
+    margin-left: 979px;
+    width: 102px;
+    height: 89px;
+}
+
