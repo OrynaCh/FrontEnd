@@ -1,0 +1,10 @@
+@import "reset.less";
+
+@bg-login:#0A1A26;
+@color-white:#fff;
+@color-primary:#D3DBE0;
+@bg-input:#263845;
+@bg-form:#0C202E;
+@bg-dropdown:#142836;
+@color-dropdown:#79838A;
+@bg-submit: linear-gradient(281.74deg, #FCA501 0%, #F76F1A 100%);

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet/less" href="main.less">
+    <script src="less.min.js" ></script>
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="login-page">
+    <div class = "login-page__dropdown dropdown">
+        <nav class="dropdown__menu">
+                <div class="item item--active">
+                    English
+                    <span class="item__arrow"></span>
+                </div>
+                <div class="item">Deutsch - German</div>
+                <div class="item">polski - Polish</div>
+                <div class="item">русский - Russian</div>
+                <div class="item">ةيبرعلا - Arabic</div>
+                <div class="item">español - Spanish</div>
+                <div class="item">italiano - Italian</div>
+        </nav>
+    </div>
+
+    <div class="login-page__main main">
+        <div class="main__container-left ">
+        <div class="logo">
+            <img src="img/logo.svg" alt="Online Wallet">
+            <h1>Online Wallet</h1>
+        </div>
+        <div class="main__for-login">
+            <h2>For login you have to download the mobile app and be registered in.</h2>
+            <p>
+                If you have already registered please enter your data and click Log in button.
+            </p>
+        </div>
+        <div class="main__downloads app">
+            <div class="app_google">
+                <img src="img/GooglePlay.svg" alt="Google Play">
+                <p>Show QR-code</p>
+            </div>
+            <div class="app_apple">
+                <img src="img/app-store.svg" alt="Apple Store">
+                <p>Show QR-code</p>
+            </div>
+        </div>
+        </div>
+        <div class="container-right">
+            <div class="container-right__form form-login">
+            <form action="">
+                <div class="form-login__title">Log In</div>
+                <div class="form-login__field">
+                    <div class="label">Login</div>
+                    <input type="text" class="input">
+                </div>
+                <div class="form-login__field">
+                    <div class="label">Device Name</div>
+                    <input type="text" class="input">
+                </div>
+                <div class="form-login__field">
+                    <div class="label">Password</div>
+                    <div class="password">
+                    <input type="password" class="input">
+                    <span class="switch-password"></span>
+                </div>
+                </div>
+                <div class="form-login__field">
+                    <button type="submit" class="input input--submit">log in </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class="login-page__lower-bg">
+            <img src="img/grid_ce-orange.png" alt="background">
+    </div>
+</div>
+</body>
+</html>

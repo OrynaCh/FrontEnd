@@ -1,0 +1,239 @@
+@import "reset.less";
+
+@bg-login:#0A1A26;
+@color-primary:#D3DBE0;
+@bg-input:#263845;
+@bg-form:#0C202E;
+@bg-dropdown:#142836;
+@color-dropdown:#79838A;
+@bg-submit: linear-gradient(281.74deg, #FCA501 0%, #F76F1A 100%);
+
+body,html,.login-page{
+  height:100%;
+  color: white;
+  font-family: "Roboto"
+
+}
+
+.body {
+  color:#fff;
+  font-family: "Roboto";
+
+}
+
+body,html,.login-page{
+  height:100%;
+
+}
+.login-page{
+  background: @bg-login;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+    .dropdown{
+      margin:24px 30px 0px auto;
+      cursor: pointer;
+    }
+
+.dropdown__menu{
+  background: @bg-dropdown;
+  height: 32px;
+  width: 128px;
+  border-radius: 3px;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  &-nav{
+    display:none;
+  }
+  &--active{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color:@color-dropdown;
+  }
+  &-arrow{
+    background: url(http://localhost:63342/untitled5/img/arrow-open.svg) no-repeat;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: 4px;
+  }
+}
+.login-page__main{
+  display: flex;
+  flex-wrap: wrap;
+  width:1020px;
+  margin: 56px auto 0px;
+}
+.main__for-login{
+  max-width:380px;
+  margin-right: 184px;
+}
+.main__logo {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  margin-bottom: 92px;
+  margin-left: 0px;
+  margin-top: 56px;
+}
+.container-left {
+  margin-left: auto;
+  margin-right: auto;
+}
+  h1{
+    color:#fff;
+    font-size: 24px;
+    line-height: 100%;
+    margin-left: 15px;
+  }
+
+  h2{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    color:#fff;
+    margin-bottom: 24px;
+}
+.main__for-login p {
+  font-size: 16px;
+  color: white;
+  line-height: 150%;
+  margin-bottom: 40px;
+
+}
+.description-login__downloads{
+  display: flex;
+}
+.main__downloads{
+  display: flex;
+.app_apple {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-left: 62.02px;
+& p {
+  margin-top: 16px;
+  border-bottom:1px dashed #D3DBE0;
+  padding-bottom: 2px;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  font-size: 13px;
+}
+}
+  .app_google {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    & p {
+      margin-top: 16px;
+      border-bottom: 1px dashed #D3DBE0;
+      padding-bottom: 2px;
+      width: max-content;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+      font-size: 13px;
+
+    }
+  }
+
+}
+.container-right__form{
+  background: @bg-form;
+  border-radius: 4px;
+  padding: 28px;
+  width:456px;
+  height: 480px;
+}
+.form-login__title{
+  color:#fff;
+  font-size: 22px;
+  text-align: center;
+  line-height: 26px;
+}
+.form-login {
+  &__field {
+    margin-bottom: 36px;
+    position: relative;
+  }
+
+  &__password {
+    display: flex;
+  }
+
+}
+
+.input {
+  background: @bg-input;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  color:white;
+  width: 100%;
+  height: 48px;
+  border-radius: 3px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.label{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  margin-bottom: 8px;
+  margin-top: 25px;
+}
+
+  .switch-password {
+    background: url(http://localhost:63342/untitled5/img/view-off.svg) no-repeat;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 5px;
+  }
+
+    .input--submit{
+      color:#fff;
+      background: @bg-submit;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-weight: 500;
+      font-size: 18px;
+      width: 100%;
+      height: 48px;
+      border-radius: 3px;
+      padding-left: 12px;
+      position: relative;
+      }
+
+
+.login-page__lower-bg{
+  margin-top: auto;
+  & img{
+    height:280px;
+    background-size: cover;
+    margin-bottom:0px;
+    width:100%;
+  }
+
+}
+
+
+
