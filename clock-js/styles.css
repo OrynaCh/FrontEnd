@@ -1,0 +1,43 @@
+.buttons {
+    height: 100px;
+    text-size: 100px;
+
+}
+
+.container {
+    text-align: center;
+    margin: auto;
+    align-content: center;
+    border-radius: 20px;
+    border-style: double;
+    padding: 5px;
+    height: 280px;
+    width: 450px;
+    background: orange;
+}
+
+.numbers {
+    font-size: 120px;
+    color: darkslategrey;
+}
+
+.start {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    font-size: 35px;
+    background: lightgrey;
+}
+.but {
+    outline: none;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    font-size: 35px;
+    border-color: grey;
+    background: lightgrey;
+    border-style: groove;
+    color: darkslategray;
+}
